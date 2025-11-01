@@ -5,7 +5,7 @@ title: Abha Bhole
 
 ## About Me
 
-![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}
+![Profile Picture]({{ "assets/images/Abha_portrait.jpeg" | relative_url }}){: class="profile-image"}
 
  
 My name is Abha Bhole and I am a 3rd Year Mechanical Engineering undergraduate student at Cornell University.
