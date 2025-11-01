@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Abha Bhole - Curriculum Vitae
 permalink: /cv/
 ---
 ## Curriculum Vitae
