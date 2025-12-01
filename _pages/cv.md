@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 ## Curriculum Vitae
 
-[Download my CV]({{ "/assets/Resume Bhole_Abha_2025" | relative_url }}) in PDF format.
+[Download my CV]({{ "/assets/Resume Bhole_Abha_2025 - Google Docs.pdf" | relative_url }}) in PDF format.
 
 
 **Email:** [ab2792@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +1 607 280-0844
@@ -75,3 +75,4 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 Available upon request.
 
 ---
+git 
