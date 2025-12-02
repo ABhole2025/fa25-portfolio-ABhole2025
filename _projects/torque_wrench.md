@@ -1,12 +1,29 @@
 ---
 layout: project
-title: Radio CAD Rendering
-description: Advanced CAD Project
-technologies: [Autodesk Fusion]
+title: Torque Wrench Design Project – MAE 3270 (Fall 2025)
+description: Design of torque wrench for class project - MAE 3270: Mechanics of Materials
+technologies: [ANSYS, Autodesk Fusion 360, MATLAB]
 image: /assets/images/radio-machine-cad.jpg
 ---
 
-For a class, we were asked to CAD a complex object. This design was...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. 
+For my class MAE 3270: Mechanics of Materials, I was assigned a project to design a non-ratcheting, 3/8 inch drive instrumented torque wrench rated for 600 in-lbf. This project involved material selection, stress analysis including fracture and fatigue scenarios, CAD done in Fusion 360, and finite element analysis done in ANSYS.
+
+Minimum project requirements were as follows:
+
+ -Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
+
+-Safety factor of Xo = 4 for yield or brittle failure 
+ 
+-Safety factor of XK = 2 for crack growth from an assumed crack of depth 0.04 inches
+(1 mm).
+ 
+-Fatigue stress safety factor of XS = 1.5
+
+-Use steel, aluminum, or titanium alloys
+
+-
+
+-
 
 Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
 
