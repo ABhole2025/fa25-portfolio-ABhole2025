@@ -7,21 +7,18 @@
 
 
 # Site Settings
-locale                   : "en-US"
-title                    : Abha Bhole
-title                    : Abha Bhole
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : Abha Bhole
-description              : Abha Bhole - Projects and CV 
-baseurl                  : "fa25-portfolio-ABhole2025" # Set this to your repo name 
-name                     : Abha Bhole
-description              : Abha Bhole - Projects and CV 
-baseurl                  : "/fa25-portfolio-ABhole2025/" # Set this to your repo name 
+# Site Settings
+locale: "en-US"
+title: "Abha Bhole"
+title_separator: "-"
+subtitle:
+name: "Abha Bhole"
+description: "Abha Bhole - Projects and CV"
+baseurl: "/fa25-portfolio-ABhole2025"   # Correct GitHub Pages style
 
 # Theme and Style
 theme: jekyll-theme-minimal
-color_scheme: dark # light/default, dark, or aqua
+color_scheme: dark
 
 sass:
   style: compressed
@@ -34,16 +31,15 @@ collections:
     output: true
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:name/
 
 # Markdown
 markdown: kramdown
 kramdown:
   input: GFM
 
-# Plugins (previously gems:)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
-
