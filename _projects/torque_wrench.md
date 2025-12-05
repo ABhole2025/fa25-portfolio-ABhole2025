@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Torque Wrench Design Project MAE 3270 (Fall 2025)
+title: Torque Wrench Design Project - MAE 3270 - Fall 2025
 description: Design of torque wrench for class project - MAE 3270: Mechanics of Materials
 technologies: [ANSYS, Autodesk Fusion 360, MATLAB]
 image: /assets/images/radio-machine-cad.jpg
