@@ -10,18 +10,16 @@ For my class MAE 3270: Mechanics of Materials, I was assigned a project to desig
 
 Minimum project requirements were as follows:
 
-Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
+-Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
 
-Safety factor of Xo = 4 for yield or brittle failure 
+-Safety factor of Xo = 4 for yield or brittle failure 
 
-Safety factor of XK = 2 for crack growth from an assumed crack of depth 0.04 inches
+-Safety factor of XK = 2 for crack growth from an assumed crack of depth 0.04 inches
 (1 mm).
 
-Fatigue stress safety factor of XS = 1.5
+-Fatigue stress safety factor of XS = 1.5
 
-Use steel, aluminum, or titanium alloys
-
-ajakakak
+-Use steel, aluminum, or titanium alloys
 
 Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
 
