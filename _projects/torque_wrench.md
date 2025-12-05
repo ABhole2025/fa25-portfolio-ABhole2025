@@ -9,16 +9,11 @@ image: /assets/images/radio-machine-cad.jpg
 For my class MAE 3270: Mechanics of Materials, I was assigned a project to design a non-ratcheting, 3/8 inch drive instrumented torque wrench rated for 600 in-lbf. This project involved material selection, stress analysis including fracture and fatigue scenarios, CAD done in Fusion 360, and finite element analysis done in ANSYS.
 
 Minimum project requirements were as follows:
-
- -Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
-
+-Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
 -Safety factor of Xo = 4 for yield or brittle failure 
- 
 -Safety factor of XK = 2 for crack growth from an assumed crack of depth 0.04 inches
 (1 mm).
- 
 -Fatigue stress safety factor of XS = 1.5
-
 -Use steel, aluminum, or titanium alloys
 
 -
