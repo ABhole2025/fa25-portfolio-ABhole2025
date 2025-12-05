@@ -16,7 +16,8 @@ Minimum project requirements were as follows:
 -Fatigue stress safety factor of XS = 1.5
 -Use steel, aluminum, or titanium alloys
 
--
+-ajakakak
+
 
 -
 
