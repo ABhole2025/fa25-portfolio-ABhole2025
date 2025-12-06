@@ -3,7 +3,7 @@ layout: project
 title: "Torque Wrench Design Project – MAE 3270 (Fall 2025)"
 description: "Design and analysis of an instrumented torque wrench for MAE 3270: Mechanics of Materials"
 technologies: ["ANSYS", "Autodesk Fusion 360", "MATLAB"]
-image: /assets/images/radio-machine.jpg
+image: /assets/Screenshot 2025-12-06 at 18.38.17.png
 ---
 
 For my class **MAE 3270: Mechanics of Materials**, I completed a semester-long design project to develop a **non-ratcheting, 3/8-inch drive instrumented torque wrench** rated for **600 in-lbf**.  
