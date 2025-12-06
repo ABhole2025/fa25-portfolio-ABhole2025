@@ -3,14 +3,10 @@ layout: project
 title: "Torque Wrench Design Project - MAE 3270 (Fall 2025)"
 description: "Design of torque wrench for class project - MAE 3270: Mechanics of Materials"
 technologies: ["ANSYS", "Autodesk Fusion 360", "MATLAB"]
-image: /assets/CAD.png
+image: <img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 ---
-
-
-
-
-
-
 For my class **MAE 3270: Mechanics of Materials**, I was assigned a semester project to design a **non-ratcheting, 3/8-inch drive instrumented torque wrench** rated for **600 in-lbf**. The objective was to integrate mechanical design, material selection, strain-based sensing, and finite element analysis into a single functional tool design.
 
 The project scope included:
@@ -39,7 +35,9 @@ The torque wrench was designed as a straight-handle, non-ratcheting beam subject
 
 The rectangular cross-section was selected to balance bending stiffness, strain sensitivity, and available surface area for strain gauge placement.
 
-![Overall CAD model of torque wrench]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
@@ -52,9 +50,14 @@ The torque wrench was modeled in **Fusion 360** with all key dimensions defined 
 
 These dimensions were used directly in both the analytical calculations and the finite element model.
 
-![Fully dimensioned CAD model]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
-![Side face showing strain gauge mounting surface]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
@@ -78,7 +81,9 @@ The applied loading corresponds to a torque of **600 in-lbf**, modeled in the FE
 
 This loading produces bending about a single neutral axis, consistent with the assumptions used in the analytical beam-bending calculations.
 
-![Loads and boundary conditions diagram]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
@@ -88,7 +93,9 @@ Finite element analysis was performed to extract **normal strain aligned with th
 
 The strain field in the gauge region was found to be sufficiently uniform, validating the assumption of average strain measurement by the bonded strain gauges.
 
-![Normal strain contour plot (gauge direction)]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
@@ -96,7 +103,9 @@ The strain field in the gauge region was found to be sufficiently uniform, valid
 
 Maximum principal stress contours were examined to identify the peak stresses in the wrench under rated loading and to confirm compliance with design limits.
 
-![Maximum principal stress contour plot]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
@@ -106,7 +115,9 @@ Linear foil strain gauges with a carrier size of **7.6 mm × 5.8 mm** were selec
 
 The **0.700-in-wide gauge mounting face** provides sufficient space to bond all four gauges with appropriate spacing, satisfying physical installation and manufacturability requirements.
 
-![Strain gauge layout on wrench face]({{ "/assets/images/radio-machine.jpg" | relative_url }})
+<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+     alt="Overall CAD model of torque wrench"
+     class="project-image">
 
 ---
 
