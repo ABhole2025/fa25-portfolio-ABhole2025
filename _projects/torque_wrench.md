@@ -39,10 +39,6 @@ A rectangular cross-section was selected to balance:
 - Strain sensitivity  
 - Available surface area for strain gauge installation  
 
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
-     alt="Overall CAD model of torque wrench"
-     class="project-image">
-
 ---
 
 ## CAD Model and Dimensions
