@@ -38,7 +38,6 @@ A rectangular cross-section was selected to balance:
 - Bending stiffness  
 - Strain sensitivity  
 - Available surface area for strain gauge installation  
-
 ---
 
 ## CAD Model and Dimensions
@@ -50,11 +49,11 @@ The torque wrench was modeled in **Fusion 360** with all key dimensions defined 
 
 These dimensions were used directly in both the analytical calculations and the finite element model.
 
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+<img src="{{ '/assets/CAD.png' | relative_url }}"
      alt="Fully dimensioned CAD model"
      class="project-image">
 
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+<img src="{{ '/assets/CAD dimension.png' | relative_url }}"
      alt="Gauge mounting surface detail"
      class="project-image">
 
