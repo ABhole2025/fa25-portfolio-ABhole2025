@@ -80,10 +80,12 @@ The square drive end of the wrench was fully constrained in translation and rota
 
 This loading configuration produces bending about a single neutral axis, consistent with the assumptions used in the analytical beam-bending calculations.
 
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/force_applied.png' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
-
+<img src="{{ '/assets/redesign_first_mesh/clamped-drive.png' | relative_url }}"
+     alt="Loads and boundary conditions diagram"
+     class="project-image">
 ---
 
 ## Finite Element Analysis – Strain Results
