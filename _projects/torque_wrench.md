@@ -38,6 +38,7 @@ A rectangular cross-section was selected to balance:
 - Bending stiffness  
 - Strain sensitivity  
 - Available surface area for strain gauge installation  
+
 ---
 
 ## CAD Model and Dimensions
