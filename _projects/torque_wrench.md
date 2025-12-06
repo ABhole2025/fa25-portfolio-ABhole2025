@@ -5,6 +5,12 @@ description: "Design of torque wrench for class project - MAE 3270: Mechanics of
 technologies: ["ANSYS", "Autodesk Fusion 360", "MATLAB"]
 image: /assets/CAD.png
 ---
+
+
+
+
+
+
 For my class **MAE 3270: Mechanics of Materials**, I was assigned a semester project to design a **non-ratcheting, 3/8-inch drive instrumented torque wrench** rated for **600 in-lbf**. The objective was to integrate mechanical design, material selection, strain-based sensing, and finite element analysis into a single functional tool design.
 
 The project scope included:
