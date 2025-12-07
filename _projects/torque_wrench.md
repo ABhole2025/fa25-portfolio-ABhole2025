@@ -21,8 +21,8 @@ The scope of the project included:
 
 The minimum project requirements were:
 
-- Minimum electrical output of **1.0 mV/V** at the rated torque of **600 in-lbf**
-- Static safety factor **X₀ ≥ 4** (yield or brittle failure)
+- Minimum electrical output of **1.0 mV/V** from strain gauge at the rated torque of **600 in-lbf**
+- Safety factor **X₀ ≥ 4** for failiure due to stress (yielding or brittle, depending on material)
 - Fracture safety factor **Xᴷ ≥ 2** assuming an initial surface crack of depth **0.04 in (1 mm)**
 - Fatigue safety factor **Xˢ ≥ 1.5**
 - Use of a **steel, aluminum, or titanium alloy**
@@ -31,13 +31,11 @@ The minimum project requirements were:
 
 ## Concept and Overall Design
 
-The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque.  
-This configuration produces a predictable, nearly linear strain field suitable for strain-gauge-based torque measurement while maintaining geometric simplicity and structural robustness.
+The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
 
-A rectangular cross-section was selected to balance:
-- Bending stiffness  
-- Strain sensitivity  
-- Available surface area for strain gauge installation  
+First, hand calculations were done to create a design that met the requiremets. Using material data from Granta, a handful of materials were selected from the steel, aluminum, and titanium alloys. The preliminary selection was doen by looking at the ration of their fatugue stress to their yield strength and ultimate strength. The, taking the relevant material properties, they were run through the following MATLAB script:
+
+
 
 ---
 
