@@ -19,6 +19,8 @@ The scope of the project included:
 
 ## <span style="color:#A7BADB;">Project Requirements</span>
 
+---
+
 The minimum project requirements were:
 
 - Minimum electrical output of **1.0 mV/V** from strain gauge at the rated torque of **600 in-lbf**
@@ -460,6 +462,8 @@ All project performance requirements were satisfied.
 ---
 
 ## <span style="color:#A7BADB;">Conclusions and Reflections</span>
+
+---
 
 This project demonstrated the integration of mechanics of materials theory with finite element modeling and strain-based instrumentation.  
 Strong agreement between analytical predictions and FEM results increased confidence in the final design.
