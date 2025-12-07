@@ -376,8 +376,7 @@ These dimensions were used directly in both the analytical calculations and the 
 
 #### Loads and Boundary Conditions
 
-The applied loading corresponds to a torque of **600 in-lbf**, modeled in the FEM as an equivalent force applied at the end of the handle.  
-The square drive end of the wrench was fully constrained in translation and rotation.
+The applied loading corresponds to a torque of **600 in-lbf**, modeled in the FEM as an equivalent force applied at the end of the handle. The square drive end of the wrench was fully constrained in displacement.
 
 This loading configuration produces bending about a single neutral axis, consistent with the assumptions used in the analytical beam-bending calculations.
 
