@@ -35,8 +35,6 @@ The minimum project requirements were:
 
 ---
 
-<div style="margin-top:3rem;"></div>
-
 #### Hand Calculations Using MATLAB
 
 The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
@@ -301,7 +299,6 @@ This code let me input the parameters of the chosen design and tweak it, while a
 
 ---
 
-<div style="margin-top:3rem;"></div>
 
 #### Material Selection and Strain Gauge for Sensitivity Requirement
 
@@ -358,7 +355,6 @@ ALL CRITERIA MET: YES
 
 ---
 
-<div style="margin-top:3rem;"></div>
 
 #### CAD Model and Dimensions
 
@@ -396,7 +392,6 @@ This loading configuration produces bending about a single neutral axis, consist
 
 ---
 
-<div style="margin-top:3rem;"></div>
 
 #### Mesh
 
@@ -414,8 +409,6 @@ Refined Mesh:
 
 ---
 
-<div style="margin-top:3rem;"></div>
-
 #### Finite Element Analysis – Principal Stress
 
 Original mesh (**0.25 in** elements)
@@ -430,8 +423,6 @@ Refined mesh (**0.1 in** elements)
 
 ---
 
-<div style="margin-top:3rem;"></div>
-
 #### Finite Element Analysis – Strain Results
 
 Original mesh (**0.25 in** elements)
@@ -444,7 +435,6 @@ Refined mesh (**0.1 in** elements)
      alt="Normal strain contour plot"
      class="project-image">
 
-<div style="margin-top:3rem;"></div>
 
 ###### Strain at gauge (1.0 in from drive center:)
 
@@ -457,8 +447,6 @@ Refined mesh (**0.1 in** elements)
 
 ---
 
-<div style="margin-top:3rem;"></div>
-
 #### Finite Element Analysis – Normal Stress 
 
 Original mesh (**0.25 in** elements)
@@ -469,8 +457,6 @@ Original mesh (**0.25 in** elements)
 Refined mesh (**0.1 in** elements)
     
 ---
-
-<div style="margin-top:3rem;"></div>
 
 #### Strain Gauge Selection and Layout
 
@@ -484,8 +470,6 @@ The **0.700-inch-wide gauge mounting face** provides sufficient space to bond al
      class="project-image">
 
 ---
-
-<div style="margin-top:3rem;"></div>
 
 #### Torque Wrench Sensitivity (From FEM Strain Results)
 
@@ -509,12 +493,10 @@ This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 
 ---
 
-<div style="margin-top:3rem;"></div>
 
 #### Stress Concentration Considerations
 
 
-<div style="margin-top:3rem;"></div>
 
 #### Results Summary (FEM Values)
 
