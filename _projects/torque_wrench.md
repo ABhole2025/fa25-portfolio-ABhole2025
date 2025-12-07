@@ -443,31 +443,7 @@ Refined mesh (**0.1 in** elements)
      class="project-image">
 
 - Original mesh (**0.25 in** elements): strain = 635.32 microstrain  
-- Refined mesh (**0.1 in** elements): strain = 636.64 microstrai
-
----
-
-#### Finite Element Analysis – Normal Stress 
-
-Original mesh (**0.25 in** elements)
-<img src="{{ '/assets/redesign_first_mesh/radio-machine.jpg' | relative_url }}"
-     alt="Maximum principal stress contour plot"
-     class="project-image">
-
-Refined mesh (**0.1 in** elements)
-    
----
-
-#### Strain Gauge Selection and Layout
-
-Linear foil strain gauges with a carrier size of **7.6 mm × 5.8 mm** were selected.  
-Four identical gauges were installed on a single face of the wrench to form a **full Wheatstone bridge** configuration.
-
-The **0.700-inch-wide gauge mounting face** provides sufficient space to bond all four gauges with appropriate spacing, satisfying physical installation and manufacturability requirements.
-
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
-     alt="Strain gauge layout on wrench face"
-     class="project-image">
+- Refined mesh (**0.1 in** elements): strain = 636.64 microstrain
 
 ---
 
@@ -493,6 +469,19 @@ This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 
 ---
 
+#### Finite Element Analysis – Normal Stress 
+
+Original mesh (**0.25 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/normal stress.png' | relative_url }}"
+     alt="Maximum principal stress contour plot"
+     class="project-image">
+
+Refined mesh (**0.1 in** elements)
+<img src="{{ '/assets/2nd_mesh/new_mesh_stress_max.png' | relative_url }}"
+     alt="Maximum principal stress contour plot"
+     class="project-image">
+
+---
 
 #### Stress Concentration Considerations
 
