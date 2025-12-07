@@ -552,18 +552,18 @@ As such, it could be said that widening the geometry and replacing sharp edges w
 
 ---
 
-This project integrated material selection, hand calculations, CAD modeling, and finite element analysis to design an instrumented torque wrench capable of meeting required mechanical and strain sensing requirements. The final design, using AISI A2 Tool Steel and a full-bridge strain gauge configuration, satisfied all safety factors and produced the required 1.27 mV/V output. 
+This project integrated material selection, hand calculations, CAD modeling, and finite element analysis to design an instrumented torque wrench capable of meeting the required mechanical and strain-sensing specifications. The final design, using AISI A2 Tool Steel and a full-bridge strain gauge configuration, satisfied all safety factors and produced the required 1.27 mV/V output.  
 
 Key takeaways from this project include:
 
--**Balancing stiffness and sensitivity**: For ease of use, I picked a stiffer material to reduce deformation when load is applied. However, I had to carefully consider strain gauge type and position to ensure the sensitivity requirements were met.
+- **Balancing stiffness and sensitivity:** To reduce deformation under load, I selected a stiffer material. However, careful consideration of strain gauge type and placement was necessary to ensure the sensitivity requirements were met.  
 
--**Multiple methods of validation and analysis**: The ANSYS and hand calculation values were relatively similar, showing that beam theory works as a good approximation for the value we were extracting.
+- **Multiple methods of validation and analysis:** Hand calculations and ANSYS results were relatively consistent, showing that beam theory provides a reasonable approximation for the quantities of interest.  
 
--**Stress concentrations**: FEM results revealed stress concentrations at geometric transitions, highlighting the tradeoff between local stress reduction (e.g., via fillets or widened sections) and global load distribution.
+- **Stress concentrations:** FEM results revealed stress concentrations at geometric transitions, highlighting the tradeoff between local stress reduction (e.g., via fillets or widened sections) and global load distribution.  
 
--**Iteration:**: Iterating geometry, mesh refinement, and gauge placement was crucial to meeting project specifications. 
+- **Iteration:** Iterating geometry, mesh refinement, and gauge placement was crucial to meeting project specifications.  
 
--**Practical engineering considerations**: Considerations such as ease of use, material cost, and strain gause size and placement highlighted the interplay between pure technical requirements and actual usage.
+- **Practical engineering considerations:** Factors such as ease of use, material cost, and strain gauge size and placement emphasized the interplay between technical requirements and real-world application.  
 
-Overall, this project enhanced my understanding of the iterative design process, as well as the skills of evaluating inputis (e.g.material properties, geometry) agains outputs (e.g. deflection, strain gauge output) using my engineering intuition. Furthermore, it highlighted the importance of considering tradeoffs and other practical matters, such as ease of use. Future work could extend this design to include experimental validation and optimization for manufacturability, bridging the gap between simulation and a fully functional, tested torque wrench.
+Overall, this project enhanced my understanding of the iterative design process and strengthened my ability to evaluate inputs (e.g., material properties, geometry) against outputs (e.g., deflection, strain gauge response) using engineering intuition. It also underscored the importance of tradeoffs and practical considerations in mechanical design. Future work could extend this design to include experimental validation and optimization for manufacturability, bridging the gap between simulation and a fully functional, tested torque wrench.
