@@ -290,9 +290,8 @@ end
 ```
 
 This code let me input the parameters of the chosen design and tweak it, while adding extra condtions, such as keeping handle deflection less than 2% of the length from the center of the drive to the end where load is applied.
+
 ---
-
-
 
 ## CAD Model and Dimensions
 
@@ -324,6 +323,7 @@ Mechanical properties used in analysis:
 - Fracture toughness: **Kᴵᶜ = 17.6 ksi√in**
 
 This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
+
 ---
 
 ## Loads and Boundary Conditions
@@ -340,6 +340,7 @@ This loading configuration produces bending about a single neutral axis, consist
 <img src="{{ '/assets/redesign_first_mesh/clamped-drive.png(1)' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
+
 ---
 
 ## Finite Element Analysis – Strain Results
