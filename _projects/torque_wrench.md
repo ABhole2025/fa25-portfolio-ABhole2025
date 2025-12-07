@@ -29,15 +29,270 @@ The minimum project requirements were:
 
 ---
 
-## Concept and Overall Design
+## Design process
 
 The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
 
 First, hand calculations were done to create a design that met the requiremets. Using material data from Granta, a handful of materials were selected from the steel, aluminum, and titanium alloys. The preliminary selection was doen by looking at the ration of their fatugue stress to their yield strength and ultimate strength. The, taking the relevant material properties, they were run through the following MATLAB script:
 
+```matlab
+%% WRENCH DESIGN ITERATOR
+% ---------------------------------------------------------------
+%
+%   - Static safety factor X0 >= 4
+%   - Fatigue safety factor XS >= 1.5
+%   - Crack growth safety factor XK >= 2
+%   - Strain-gauge sensitivity Vout >= 1.0 mV/V (half-bridge)
+% ---------------------------------------------------------------
 
+clear; clc;
 
+%% ---------------------- FIXED INPUTS --------------------------
+M = 600;          % torque (in-lbf)
+L = 16;           % wrench length (in)
+c = 1.0;          % gauge location from drive (in)
+a = 0.04;         % crack depth (in)
+GF = 2.0;         % gauge factor
+V_required = 1.0; % minimum mV/V (half-bridge)
+
+% min safety factors
+X0_req = 4;
+XS_req = 1.5;
+XK_req = 2;
+
+%% ------------------ GEOMETRY VALUES TO TRY --------------------
+h_values = 0.5 : 0.01 : 1.0;   % thickness (in)
+b_values = 0.5 : 0.01 : 1.0;   % width (in)
+
+%% --------------------- MATERIAL PROPERTIES ---------------------
+% Columns: [E (psi), su (psi), sfatigue (psi), KIC (psi·sqrt(in))]
+% All values use the lowest of each provided range in Granta.
+
+material_names = { ...
+    'Aluminum 6061-T6', ...
+    'Aluminum 7075-T6', ...
+    'Ti-6Al-4V (aged)', ...
+    'AISI A2 Tool Steel', ...
+    'AISI S7 Tool Steel', ...
+    'Aluminum 7020-T6', ...
+    'AISI O6 Tool Steel',...
+    'Ti-5Al-2.5Sn-0.5Fe, annealed'};
+
+materials = [ ...
+    9.66e6     34.8e3    17.4e3    27.3e3;   % Al 6061-T6
+    10e6       66.7e3    24.9e3      24.2e3;   % Al 7075-T6
+    16.1e6     148e3     87.4e3    74.6e3;   % Ti-6Al-4V aged
+    30.3e6     261e3     88.2e3    17.6e3;   % A2 Tool Steel
+    29.9e6     53.8e3    20.4e3    50.3e3;   % S7 Tool Steel
+    10.2e6     46.1e3    18.4e3    30e3;     % Al 7020-T6
+    29.6e6     270e3     91.2e3    17.1e3;  % O6 Tool Steel
+    15.5e6     110e3     58.6e3    84.6e3]; %Ti-5Al-2.5Sn-0.5Fe, annealed
+
+%% ---------------- STORAGE FOR VALID DESIGNS -------------------
+valid = [];  
+row = 0;
+
+%% ------------------ 
+for m = 1:size(materials,1)
+
+    E = materials(m,1);
+    su = materials(m,2);
+    sfatigue = materials(m,3);
+    KIC = materials(m,4);
+
+    for h = h_values
+        for b = b_values
+
+            % Moment of inertia
+            I = b * h^3 / 12;
+
+            % Distance from neutral axis
+            y = h/2;
+
+            % bending stress
+            sigma = M * y / I;   % psi
+            X0 = su / sigma;
+
+            % strain where strain gauge is placed
+            F = M / L;                % force (lb)
+            M_g = F * (L - c);        % local moment (in-lb)
+            sigma_g = M_g * y / I;    % psi
+            epsilon_g = sigma_g / E;  % strain
+            epsilon_micro = epsilon_g * 1e6;
+
+            % Fullbridge output
+            Vout = (GF * epsilon_g) * 1e3;   % mV/V
+
+            % Fatigue safety factor
+            XS = sfatigue / sigma;
+
+            % Crack growth safety factor
+            F_K = 1.12;
+            K_I = F_K * sigma * sqrt(pi * a);
+            XK = KIC / K_I;
+
+            %  Deflection
+            defl = (F * L^3) / (3 * E * I);
+
+            %---------------- CHECK REQUIREMENTS ----------------
+            if X0 >= X0_req && XS >= XS_req && XK >= XK_req && Vout >= V_required && defl <= L/50 && XS >= 2 && XK <= 5 
+
+                row = row + 1;
+                valid(row).material = material_names{m};
+                valid(row).h = h;
+                valid(row).b = b;
+                valid(row).Vout = Vout;
+                valid(row).epsilon_micro = epsilon_micro;
+                valid(row).X0 = X0;
+                valid(row).XS = XS;
+                valid(row).XK = XK;
+                valid(row).deflection = defl;
+            end
+        end
+    end
+end
+
+%% ----------------------- OUTPUT -------------------------------
+if isempty(valid)
+    fprintf('\nNo designs satisfy all requirements.\n');
+else
+    fprintf('\n%d valid designs found.\n', length(valid));
+
+    % Convert to table for nicer viewing
+    T = struct2table(valid);
+    % Sort by highest sensitivity (Vout)
+    T = sortrows(T, 'epsilon_micro', 'descend');
+
+    fprintf('\nAll valid designs:\n');
+disp(T(:, {'material','h','b','Vout','epsilon_micro','X0','XS','XK','deflection'}));
+
+locked = struct( ...
+    'material','AISI A2 Tool Steel', ...
+    'h',0.63, ...
+    'b',0.56, ...
+    'Vout',1.0023, ...
+    'epsilon_micro',501.14, ...
+    'X0',16.114, ...
+    'XS',5.4455, ...
+    'XK',2.7369, ...
+    'deflection',0.14481);
+
+disp(locked);
+   
+end
+```
+
+This code displayed a large list of potential designs, giving the safety factors, strain gauge output, and the dimensions for h and b. there were a huge number of potential designs.
+
+After picking one design, I ran it through this 'single design tester'
+
+```matlab
+%% ===================== MATERIAL PROPERTIES ==========================
+% Columns: [E (psi), su (psi), sfatigue (psi), KIC (psi·sqrt(in))]
+material_names = { ...
+    'Aluminum 6061-T6', ...
+    'Aluminum 7075-T6', ...
+    'Ti-6Al-4V (aged)', ...
+    'AISI A2 Tool Steel', ...
+    'AISI S7 Tool Steel', ...
+    'Aluminum 7020-T6', ...
+    'AISI O6 Tool Steel', ...
+    'Ti-5Al-2.5Sn-0.5Fe, annealed'};
+
+materials = [ ...
+    9.66e6     34.8e3    17.4e3    27.3e3;    % 6061-T6
+    10e6       66.7e3    24.9e3    24.2e3;    % 7075-T6
+    16.1e6     148e3     87.4e3    74.6e3;    % Ti-6Al-4V aged
+    30.3e6     296e3     88.2e3    17.6e3;    % AISI A2 Tool Steel
+    29.9e6     53.8e3    20.4e3    50.3e3;    % AISI S7
+    10.2e6     46.1e3    18.4e3    30e3;      % 7020-T6
+    29.6e6     270e3     91.2e3    17.1e3;    % AISI O6
+    15.5e6     110e3     58.6e3    84.6e3];   % Ti-5Al-2.5Sn
+
+%% ===================== SELECT MATERIAL =============================
+material_name = 'AISI A2 Tool Steel';     % <<< YOUR DESIGN MATERIAL
+idx = find(strcmp(material_names, material_name));
+
+E        = materials(idx,1);
+su       = materials(idx,2);
+sfatigue = materials(idx,3);
+KIC      = materials(idx,4);
+
+%% ===================== GEOMETRY (YOUR VALUES) ======================
+M = 600;           % torque (in-lbf)
+L = 16;            % wrench length (in)
+b = 0.7;          % <<< YOUR thickness (in)
+h = 0.5;          % <<< YOUR width (in)
+a = 0.04;          % crack depth (in)
+GF = 2.0;          % gauge factor
+V_required = 1.0;  % mV/V
+c = 1.0;           % gauge location (in)
+
+%% Safety factor requirements
+X0_req = 4;
+XS_req = 1.5;
+XK_req = 2;
+
+%% ===================== SECTION PROPERTIES ==========================
+I = b * h^3 / 12;
+y = h / 2;
+
+%% ===================== STRESS & STATIC SF ==========================
+sigma = M * y / I;
+X0 = su / sigma;
+
+%% ===================== STRAIN & OUTPUT =============================
+F_handle = M / L;
+M_g = F_handle * (L - c);
+sigma_g = M_g * y / I;
+
+epsilon_g = sigma_g / E;
+epsilon_micro = epsilon_g * 1e6;
+
+Vout = GF * epsilon_g * 1e3;   % mV/V (half bridge)
+
+%% ===================== FATIGUE SF =================================
+XS = sfatigue / sigma;
+
+%% ===================== FRACTURE SF ================================
+F_K = 1.12;
+K_I = F_K * sigma * sqrt(pi * a);
+XK = KIC / K_I;
+
+%% ===================== DEFLECTION =================================
+deflection = (F_handle * L^3) / (3 * E * I);
+
+%% ===================== PRINT RESULTS ===============================
+fprintf('\n===== FINAL RESULTS (%s) =====\n\n', material_name);
+
+fprintf('E = %.1f Msi\n', E/1e6);
+fprintf('su = %.1f ksi\n', su/1e3);
+fprintf('sfatigue = %.1f ksi\n', sfatigue/1e3);
+fprintf('KIC = %.1f ksi*sqrt(in)\n\n', KIC/1e3);
+
+fprintf('Geometry: h = %.3f in, b = %.3f in\n', h, b);
+fprintf('Moment of inertia I = %.5f in^4\n\n', I);
+
+fprintf('Stress = %.2f ksi\n', sigma/1e3);
+fprintf('Gauge strain (full bridge) = %.1f microstrain\n', epsilon_micro);
+fprintf('Output = %.4f mV/V (req %.1f)\n', Vout, V_required);
+fprintf('Deflection = %.5f in\n\n', deflection);
+
+fprintf('Static SF X0 = %.2f (req %.1f)\n', X0, X0_req);
+fprintf('Fatigue SF XS = %.2f (req %.1f)\n', XS, XS_req);
+fprintf('Fracture SF XK = %.2f (req %.1f)\n\n', XK, XK_req);
+
+if X0 >= X0_req && XS >= XS_req && XK >= XK_req && Vout >= 1 && deflection <= L/50
+    fprintf('ALL CRITERIA MET: YES\n');
+else
+    fprintf('ALL CRITERIA MET: NO\n');
+end
+```
+
+This code let me input the parameters of the chosen design and tweak it, while adding extra condtions, such as keeping handle deflection less than 2% of the length from the center of the drive to the end where load is applied.
 ---
+
+
 
 ## CAD Model and Dimensions
 
@@ -69,7 +324,6 @@ Mechanical properties used in analysis:
 - Fracture toughness: **Kᴵᶜ = 17.6 ksi√in**
 
 This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
-
 ---
 
 ## Loads and Boundary Conditions
