@@ -466,8 +466,8 @@ Refined mesh (**0.1 in** elements)
      alt="Normal strain contour plot"
      class="project-image">
 
-- Original mesh (**0.25 in** elements): strain = 635.32 microstrain  
-- Refined mesh (**0.1 in** elements): strain = 636.64 microstrain
+- Original mesh (**0.25 in** elements): strain = **635.32 με**  
+- Refined mesh (**0.1 in** elements): strain = **636.64 με**
 
 ---
 
@@ -485,11 +485,11 @@ Where:
 - Gauge factor **GF = 2**
 - ε is the FEM-predicted strain at the gauge location
 
-Using FEM results:
-- Strain at gauge location: **___ με**  
-- Full-bridge output sensitivity: **___ mV/V**
+Using FEM results (refined mesh with **0.1 in** elements):
+- Strain at gauge location: **636.64 με**  
+- Full-bridge output sensitivity: ≈ **1.27 mV/V**
 
-This output exceeds the minimum required sensitivity of **1.0 mV/V**.
+This output exceeds the minimum required sensitivity of **1.0 mV/V**, so this design is viable for that requirement.
 
 ---
 
