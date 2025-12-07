@@ -423,6 +423,20 @@ Refined mesh (**0.1 in** elements)
 
 ---
 
+#### Finite Element Analysis – Deflection at Load Point
+
+Original mesh (**0.25 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/take2-deformation.png' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
+
+Refined mesh (**0.1 in** elements)
+Refined mesh (**0.1 in** elements)
+<img src="{{ '/assets/2nd_mesh/new_meshd_deformation.png' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
+---
+
 #### Finite Element Analysis – Strain Results
 
 Original mesh (**0.25 in** elements)
@@ -480,7 +494,19 @@ Refined mesh (**0.1 in** elements)
 <img src="{{ '/assets/images/new_mesh_stress_max.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
+     
+---
 
+#### Results Summary (FEM Values)
+
+Key results obtained from finite element analysis:
+
+- Maximum normal stress: **___ ksi**  
+- Load-point deflection: **___ in**  
+- Strain at gauge location: **___ με**  
+- Full-bridge output sensitivity: **___ mV/V**
+
+All project performance requirements were satisfied.
 ---
 
 #### Stress Concentration Considerations
@@ -494,17 +520,6 @@ Stress Analysis:
 <img src="{{ '/assets/images/filet_wide_top_stress.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
-
-#### Results Summary (FEM Values)
-
-Key results obtained from finite element analysis:
-
-- Maximum normal stress: **___ ksi**  
-- Load-point deflection: **___ in**  
-- Strain at gauge location: **___ με**  
-- Full-bridge output sensitivity: **___ mV/V**
-
-All project performance requirements were satisfied.
 
 ---
 
