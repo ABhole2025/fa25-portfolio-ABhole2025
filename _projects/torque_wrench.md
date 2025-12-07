@@ -293,7 +293,7 @@ This code let me input the parameters of the chosen design and tweak it, while a
 
 After this proocess of iteration and tweaking, this was my final design:
 
-<p style="color:#cc0000;">
+<pre style="color:#9199cc;">
 ===== FINAL RESULTS (AISI A2 Tool Steel) =====
 
 E = 30.3 Msi
@@ -314,7 +314,7 @@ Fatigue SF XS = 4.29 (req 1.5)
 Fracture SF XK = 2.15 (req 2.0)
 
 ALL CRITERIA MET: YES
-</p>
+</pre>
 
 ---
 
