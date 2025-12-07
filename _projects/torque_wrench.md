@@ -411,6 +411,8 @@ Refined Mesh:
 
 #### Finite Element Analysis – Principal Stress
 
+Contour plots for principal stresses:
+
 Original mesh (**0.25 in** elements)
 <img src="{{ '/assets/redesign_first_mesh/old_mesh_principal.png' | relative_url }}"
      alt="Normal strain contour plot"
@@ -425,12 +427,14 @@ Refined mesh (**0.1 in** elements)
 
 #### Finite Element Analysis – Deflection at Load Point
 
+Max Deflection at end of handle where loand is applied
+
 Original mesh (**0.25 in** elements)
 <img src="{{ '/assets/redesign_first_mesh/take2-deformation.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
+Deflection = **0.2803 in**
 
-Refined mesh (**0.1 in** elements)
 Refined mesh (**0.1 in** elements)
 <img src="{{ '/assets/2nd_mesh/new_meshd_deformation.png' | relative_url }}"
      alt="Normal strain contour plot"
