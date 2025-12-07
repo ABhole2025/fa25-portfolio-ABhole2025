@@ -434,7 +434,7 @@ Refined mesh (**0.1 in** elements)
 
 ###### Strain at gauge (1.0 in from drive center:)
 
-<img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.353e-4.png' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.3532e-4.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
