@@ -291,6 +291,29 @@ end
 
 This code let me input the parameters of the chosen design and tweak it, while adding extra condtions, such as keeping handle deflection less than 2% of the length from the center of the drive to the end where load is applied.
 
+After this proocess of iteration and tweaking, this was my final design:
+
+===== FINAL RESULTS (AISI A2 Tool Steel) =====
+
+E = 30.3 Msi
+su = 296.0 ksi
+sfatigue = 88.2 ksi
+KIC = 17.6 ksi*sqrt(in)
+
+Geometry: h = 0.500 in, b = 0.700 in
+Moment of inertia I = 0.00729 in^4
+
+Stress = 20.57 ksi
+Gauge strain (full bridge) = 636.5 microstrain
+Output = 1.2730 mV/V (req 1.0)
+Deflection = 0.23174 in
+
+Static SF X0 = 14.39 (req 4.0)
+Fatigue SF XS = 4.29 (req 1.5)
+Fracture SF XK = 2.15 (req 2.0)
+
+ALL CRITERIA MET: YES
+
 ---
 
 ## CAD Model and Dimensions
