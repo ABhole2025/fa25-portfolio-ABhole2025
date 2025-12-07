@@ -311,7 +311,7 @@ The gauge location is **1.0 in** from the center of the drive.</span>
 
 The full-bridge output was calculated using:</span>
 
-> <span style="color:#93B596;">V_out = GF · ε · 10³  (mV/V)</span>
+> <span style="color:#93B596;">V_out = *GF* · *ε* · *10³*  *(mV/V)*</span>
 >
 > <span style="color:#93B596;">Where:</span>
 > <span style="color:#93B596;">- Gauge factor **GF = 2**</span>
