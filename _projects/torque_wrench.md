@@ -385,7 +385,7 @@ This loading configuration produces bending about a single neutral axis, consist
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
-<img src="{{ '/assets/redesign_first_mesh/clamped-drive.png(1)' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/clamped-drive (1).png(1)' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
@@ -447,6 +447,11 @@ Using FEM results:
 This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 
 ---
+
+#### Stress Concentration Considerations
+
+
+
 
 #### Results Summary (FEM Values)
 
