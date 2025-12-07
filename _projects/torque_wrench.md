@@ -307,17 +307,16 @@ Mechanical properties used in analysis:
 
 Due to the high stiffness, I decided that the strain gauge itself should be a full bridge strain gauge, as this would amplify the voltage output to allow for the required 1 mV/V output. Four identical linear gauges can be installed on a single face of the wrench to form a **full Wheatstone bridge** configuration. The selected gauge type has a carrier size of **7.6 mm × 5.8 mm (≈0.3 in x 0.23 in)** , so four of these in the required configuration would fit on the side of the beam, that has a length under loading of **16 in**, and a height of **0.7 in**.
 
-> <span style="color:#93B596;">
-> The gauge location is **1.0 in** from the center of the drive.
+The gauge location is **1.0 in** from the center of the drive.</span>
+
+The full-bridge output was calculated using:</span>
+
+> <span style="color:#93B596;">V_out = GF · ε · 10³  (mV/V)</span>
 >
-> The full-bridge output was calculated using:
->
-> V_out = GF · ε · 10³  (mV/V)
->
-> Where:
-> - Gauge factor **GF = 2**
-> - ε is the strain at the gauge location
-> </span>
+> <span style="color:#93B596;">Where:</span>
+> <span style="color:#93B596;">- Gauge factor **GF = 2**</span>
+> <span style="color:#93B596;">- ε is the strain at the gauge location</span>
+
 
 This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
 
