@@ -414,11 +414,13 @@ Refined Mesh:
 Contour plots for principal stresses:
 
 Original mesh (**0.25 in** elements)
+
 <img src="{{ '/assets/redesign_first_mesh/old_mesh_principal.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 Refined mesh (**0.1 in** elements)
+
 <img src="{{ '/assets/redesign_first_mesh/new_mesh_principal_contours.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
@@ -429,16 +431,14 @@ Refined mesh (**0.1 in** elements)
 
 Max Deflection at end of handle where load is applied
 
--Original mesh (**0.25 in** elements)
-
+Original mesh (**0.25 in** elements)
 <img src="{{ '/assets/redesign_first_mesh/take2-deformation.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 -Deflection = **0.2803 in**
 
--Refined mesh (**0.1 in** elements)
-
+Refined mesh (**0.1 in** elements)
 <img src="{{ '/assets/2nd_mesh/new_mesd_deformation.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
@@ -450,11 +450,13 @@ Max Deflection at end of handle where load is applied
 #### Finite Element Analysis – Strain Results
 
 Original mesh (**0.25 in** elements)
+
 <img src="{{ '/assets/redesign_first_mesh/normal strain.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 Refined mesh (**0.1 in** elements)
+
 <img src="{{ '/assets/redesign_first_mesh/new_mesh_strain_contours.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
@@ -500,26 +502,33 @@ Original mesh (**0.25 in** elements)
      alt="Normal strain contour plot"
      class="project-image">
 
+Max stress on side (as if it were a beam) - **21.39 ksi**
+Overall max stress (at stress concentration) - **22.78 ksi**
+
 Refined mesh (**0.1 in** elements)
 <img src="{{ '/assets/images/new_mesh_stress_max.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
      
+Max stress on side (as if it were a beam) - **26.99 ksi**
+Overall max stress (at stress concentration) - **66.21 ksi**
+
 ---
 
 #### Results Summary (FEM Values)
 
-Key results obtained from finite element analysis:
+Key results obtained from finite element analysis (using refined mesh values):
 
-- Maximum normal stress: **___ ksi**  
-- Load-point deflection: **___ in**  
-- Strain at gauge location: **___ με**  
-- Full-bridge output sensitivity: **___ mV/V**
+- Maximum normal stress: **66.21 ksi**  
+- Load-point deflection: **0.28127 in**  
+- Strain at gauge location: **636.64 με**  
+- Full-bridge output sensitivity: **1.27 mV/V**
 
-All project performance requirements were satisfied.
 ---
 
 #### Stress Concentration Considerations
+
+There was a noticeable stress concentration in this design. 
 
 New Geometry:
 <img src="{{ '/assets/images/filet_wide_top.png' | relative_url }}"
