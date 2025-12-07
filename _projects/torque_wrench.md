@@ -31,6 +31,8 @@ The minimum project requirements were:
 
 ## Design process
 
+#### Hand Calculations Using MATLAB
+
 The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
 
 First, hand calculations were done to create a design that met the requiremets. Using material data from Granta, a handful of materials were selected from the steel, aluminum, and titanium alloys. The preliminary selection was doen by looking at the ration of their fatugue stress to their yield strength and ultimate strength. The, taking the relevant material properties, they were run through the following MATLAB script:
@@ -293,7 +295,7 @@ This code let me input the parameters of the chosen design and tweak it, while a
 
 ---
 
-## Material Selection and Strain Gauge for Sensitivity Requirement
+#### Material Selection and Strain Gauge for Sensitivity Requirement
 
 The selected material for the final design was **AISI A2 Tool Steel**. This material is more on the brittle side than the other aluminum or titanium options shown, and I picked it scepcifically for its high stiffness, as I wanted to reduce deformation as much as possible. Additionally, I felt that this would be a more reasonable material overall, due to a relative lower cost compared to the aluminum and titanium options.
 
@@ -348,7 +350,7 @@ ALL CRITERIA MET: YES
 
 ---
 
-## CAD Model and Dimensions
+#### CAD Model and Dimensions
 
 The torque wrench was modeled in **Fusion 360**. Below is a picture of the model istelf, and its relevant dimensions. To better resemble a real torque wrench, I filleted the drive with fillets of **0.05 in**. 
 
@@ -362,8 +364,11 @@ These dimensions were used directly in both the analytical calculations and the 
      alt="Dimensions"
      class="project-image">
 
+---
 
-## Loads and Boundary Conditions
+## FEM Analysis in ANSYS
+
+#### Loads and Boundary Conditions
 
 The applied loading corresponds to a torque of **600 in-lbf**, modeled in the FEM as an equivalent force applied at the end of the handle.  
 The square drive end of the wrench was fully constrained in translation and rotation.
@@ -380,7 +385,7 @@ This loading configuration produces bending about a single neutral axis, consist
 
 ---
 
-## Finite Element Analysis – Strain Results
+#### Finite Element Analysis – Strain Results
 
 Finite element analysis was used to extract **normal strain aligned with the strain gauge grid direction** on the gauge mounting surface.
 
@@ -392,7 +397,7 @@ The strain field in the gauge region was found to be sufficiently uniform, valid
 
 ---
 
-## Finite Element Analysis – Stress Results
+#### Finite Element Analysis – Stress Results
 
 Maximum principal stress contours were examined to identify the peak stresses in the wrench under rated loading and to confirm compliance with design limits.
 
@@ -402,7 +407,7 @@ Maximum principal stress contours were examined to identify the peak stresses in
 
 ---
 
-## Strain Gauge Selection and Layout
+#### Strain Gauge Selection and Layout
 
 Linear foil strain gauges with a carrier size of **7.6 mm × 5.8 mm** were selected.  
 Four identical gauges were installed on a single face of the wrench to form a **full Wheatstone bridge** configuration.
@@ -415,7 +420,7 @@ The **0.700-inch-wide gauge mounting face** provides sufficient space to bond al
 
 ---
 
-## Torque Wrench Sensitivity (From FEM Strain Results)
+#### Torque Wrench Sensitivity (From FEM Strain Results)
 
 Strain values extracted directly from the FEM results at the gauge locations were used to compute the electrical sensitivity of the torque wrench.
 
@@ -437,7 +442,7 @@ This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 
 ---
 
-## Results Summary (FEM Values)
+#### Results Summary (FEM Values)
 
 Key results obtained from finite element analysis:
 
