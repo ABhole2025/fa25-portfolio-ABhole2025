@@ -528,7 +528,7 @@ Key results obtained from finite element analysis (using refined mesh values):
 
 #### Stress Concentration Considerations
 
-There was a noticeable stress concentration in this design. 
+There was a noticeable stress concentration in my design. Although the maximum stress at the concetration was within the required saftey factors, I still did some experimenting with the shape of the wrench to see if it could be lowered. I attempted widening the top of the wrench, and also filleting the section where the drive meets the handle. Below is the new geometry and stress analysis.
 
 New Geometry:
 <img src="{{ '/assets/images/filet_wide_top.png' | relative_url }}"
@@ -540,13 +540,30 @@ Stress Analysis:
      alt="Normal strain contour plot"
      class="project-image">
 
+max stress (at concentration) of this design: **49.08 ksi**
+
+This is a lower stress at the concentration. However, the stress at the handle has increased a bit, as visible in the colors of the contour plot. This example is still within the safety factors, but this highlights an important tradeoff - reducing stress concentrations in some areas may increase stress in others. 
+
+As such, it could be said that widening the geometry and replacing sharp edges with fillets may lower stress concentrations, but that stress may be redistributed elsewhere in the body. Therefore, much more iteration would be needed to further optimise the design.
+
 ---
 
 ## <span style="color:#A7BADB;">Conclusions and Reflections</span>
 
 ---
 
-This project demonstrated the integration of mechanics of materials theory with finite element modeling and strain-based instrumentation.  
-Strong agreement between analytical predictions and FEM results increased confidence in the final design.
+This project integrated material selection, hand calculations, CAD modeling, and finite element analysis to design an instrumented torque wrench capable of meeting required mechanical and strain sensing requirements. The final design, using AISI A2 Tool Steel and a full-bridge strain gauge configuration, satisfied all safety factors and produced the required 1.27 mV/V output. 
 
-Through this process, I gained experience balancing stiffness, strain sensitivity, and structural safety while translating theoretical requirements into a physically realizable mechanical instrument. Future work could include experimental calibration, electronics integration, and optimization of gauge placement for noise reduction.
+Key takeaways from this project include:
+
+-**Balancing stiffness and sensitivity**: For ease of use, I picked a stiffer material to reduce deformation when load is applied. However, I had to carefully consider strain gauge type and position to ensure the sensitivity requirements were met.
+
+-**Multiple methods of validation and analysis**: The ANSYS and hand calculation values were relatively similar, showing that beam theory works as a good approximation for the value we were extracting.
+
+-**Stress concentrations**: FEM results revealed stress concentrations at geometric transitions, highlighting the tradeoff between local stress reduction (e.g., via fillets or widened sections) and global load distribution.
+
+-**Iteration:**: Iterating geometry, mesh refinement, and gauge placement was crucial to meeting project specifications. 
+
+-**Practical engineering considerations**: Considerations such as ease of use, material cost, and strain gause size and placement highlighted the interplay between pure technical requirements and actual usage.
+
+Overall, this project enhanced my understanding of the iterative design process, as well as the skills of evaluating inputis (e.g.material properties, geometry) agains outputs (e.g. deflection, strain gauge output) using my engineering intuition. Furthermore, it highlighted the importance of considering tradeoffs and other practical matters, such as ease of use. Future work could extend this design to include experimental validation and optimization for manufacturability, bridging the gap between simulation and a fully functional, tested torque wrench.
