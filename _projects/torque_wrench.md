@@ -317,8 +317,7 @@ The full-bridge output was calculated using:</span>
 > <span style="color:#93B596;">- Gauge factor **GF = 2**</span><br>
 > <span style="color:#93B596;">- ε is the strain at the gauge location</span>
 
-
-This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
+The combination of this material's stiffness, and the full bridge strain gauge allow allow deformation to be kept on the lower side while still having the required output of **1.0 mV/V**
 
 ---
 
