@@ -291,9 +291,43 @@ end
 
 This code let me input the parameters of the chosen design and tweak it, while adding extra condtions, such as keeping handle deflection less than 2% of the length from the center of the drive to the end where load is applied.
 
-After this process of iteration and tweaking, this was my final design:
+---
 
-<pre style="color:#9199cc;">
+## Material Selection and Strain Gauge for Sensitivity Requirement
+
+The selected material for the final design was **AISI A2 Tool Steel**. This material is more on the brittle side than the other aluminum or titanium options shown, and I picked it scepcifically for its high stiffness, as I wanted to reduce deformation as much as possible. Additionally, I felt that this would be a more reasonable material overall, due to a relative lower cost compared to the aluminum and titanium options.
+
+<pre style="color:#93B596;">
+Mechanical properties used in analysis:
+- Young’s modulus: **E = 30.3 Msi**  
+- Ultimate strength: **σᵤ = 261 ksi**  
+- Fatigue strength: **σ_f = 88.2 ksi**  
+- Fracture toughness: **Kᴵᶜ = 17.6 ksi√in**
+</pre>
+
+Due to the high stiffness, I decided that the strain gauge itself should be a full bridge strain gauge, as this would amplify the voltage output to allow for the required 1 mV/V output. Four identical linear gauges can be installed on a single face of the wrench to form a **full Wheatstone bridge** configuration. The selected gauge type has a carrier size of **7.6 mm × 5.8 mm (≈0.3 in x 0.23 in)** , so four of these in the required configuration would fit on the side of the beam, that has a length under loading of **16 in**, and a height of **0.7 in**.
+
+<pre style="color:#93B596;">
+The gauge location is **1.0 in** from the center of the drive.
+
+The full-bridge output was calculated using:
+
+\[
+V_{\text{out}} = GF \cdot \varepsilon \cdot 10^3 \quad \text{(mV/V)}
+\]
+
+Where:
+- Gauge factor **GF = 2**
+- ε is the strain at the gauge location
+
+This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
+</pre>
+
+---
+
+After this full process of iteration and tweaking, this was my final design:
+
+<pre style="color:#9199CC;">
 ===== FINAL RESULTS (AISI A2 Tool Steel) =====
 
 E = 30.3 Msi
@@ -320,7 +354,7 @@ ALL CRITERIA MET: YES
 
 ## CAD Model and Dimensions
 
-The torque wrench was modeled in **Fusion 360**. Below is a picture of the model istelf, and its relevant dimensions. To better resemble a real torque wrench, I filleted the drive with fillets of 0.05 inches. 
+The torque wrench was modeled in **Fusion 360**. Below is a picture of the model istelf, and its relevant dimensions. To better resemble a real torque wrench, I filleted the drive with fillets of **0.05 in**. 
 
 These dimensions were used directly in both the analytical calculations and the finite element model.
 
@@ -332,21 +366,6 @@ These dimensions were used directly in both the analytical calculations and the 
      alt="Dimensions"
      class="project-image">
 
----
-
-## Material Selection
-
-The selected material for the final design was **AISI A2 Tool Steel**. This material is more on the brittle side than the other aluminum or titanium options shown, and I picked it scepcifically for its high stiffness, as I wanted to reduce deformation as much as possible. Additionally, I felt that this would be a more reasonable material overall, due to a relative lower cost compared to the aluminum and titanium options.
-
-Mechanical properties used in analysis:
-- Young’s modulus: **E = 30.3 Msi**  
-- Ultimate strength: **σᵤ = 261 ksi**  
-- Fatigue strength: **σ_f = 88.2 ksi**  
-- Fracture toughness: **Kᴵᶜ = 17.6 ksi√in**
-
-This material provided sufficient strain output for instrumentation while maintaining large safety margins against static, fatigue, and crack-growth failures.
-
----
 
 ## Loads and Boundary Conditions
 
