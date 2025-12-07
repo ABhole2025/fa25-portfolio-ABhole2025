@@ -485,7 +485,15 @@ Refined mesh (**0.1 in** elements)
 
 #### Stress Concentration Considerations
 
+New Geometry:
+<img src="{{ '/assets/images/filet_wide_top.png' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
 
+Stress Analysis:
+<img src="{{ '/assets/images/filet_wide_top_stress.png' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
 
 #### Results Summary (FEM Values)
 
