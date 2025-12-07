@@ -336,7 +336,8 @@ This loading configuration produces bending about a single neutral axis, consist
 <img src="{{ '/assets/redesign_first_mesh/force_applied.png' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
-<img src="{{ '/assets/redesign_first_mesh/clamped-drive.png' | relative_url }}"
+
+<img src="{{ '/assets/redesign_first_mesh/clamped-drive.png(1)' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
 ---
