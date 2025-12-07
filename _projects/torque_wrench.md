@@ -320,10 +320,7 @@ ALL CRITERIA MET: YES
 
 ## CAD Model and Dimensions
 
-The torque wrench was modeled in **Fusion 360** with all key dimensions defined parametrically. The CAD model explicitly shows:
-- Overall handle length  
-- Cross-sectional dimensions (*height h* and *width b*)  
-- Dedicated strain gauge mounting surface  
+The torque wrench was modeled in **Fusion 360**. Below is a picture of the model istelf, and its relevant dimensions. To better resemble a real torque wrench, I filleted the drive with fillets of 0.05 inches. 
 
 These dimensions were used directly in both the analytical calculations and the finite element model.
 
@@ -339,7 +336,7 @@ These dimensions were used directly in both the analytical calculations and the 
 
 ## Material Selection
 
-The selected material for the final design was **AISI A2 Tool Steel**, chosen for its high stiffness, excellent fatigue resistance, and ability to meet fracture safety requirements using a compact cross-section.
+The selected material for the final design was **AISI A2 Tool Steel**. This material is more on the brittle side than the other aluminum or titanium options shown, and I picked it scepcifically for its high stiffness, as I wanted to reduce deformation as much as possible. Additionally, I felt that this would be a more reasonable material overall, due to a relative lower cost compared to the aluminum and titanium options.
 
 Mechanical properties used in analysis:
 - Young’s modulus: **E = 30.3 Msi**  
