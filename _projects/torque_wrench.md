@@ -291,7 +291,7 @@ end
 
 This code let me input the parameters of the chosen design and tweak it, while adding extra condtions, such as keeping handle deflection less than 2% of the length from the center of the drive to the end where load is applied.
 
-After this proocess of iteration and tweaking, this was my final design:
+After this process of iteration and tweaking, this was my final design:
 
 <pre style="color:#9199cc;">
 ===== FINAL RESULTS (AISI A2 Tool Steel) =====
