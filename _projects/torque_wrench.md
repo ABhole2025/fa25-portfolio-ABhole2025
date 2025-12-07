@@ -384,7 +384,7 @@ This loading configuration produces bending about a single neutral axis, consist
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
-<img src="{{ '/assets/redesign_first_mesh/clamped-drive (1).png' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/clamped_drive.png' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
@@ -400,7 +400,7 @@ First Mesh:
      class="project-image">
 
 Refined Mesh:
-<img src="{{ '/assets/2nd_mesh/new_mesh_0.1_in.png' | relative_url }}"
+<img src="{{ '/assets/2nd_mesh/new_mesh_0.1 in.png' | relative_url }}"
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
@@ -409,12 +409,12 @@ Refined Mesh:
 #### Finite Element Analysis – Principal Stress
 
 Original mesh (**0.25 in** elements)
-<img src="{{ '/assets/redesign_first_mesh/old_mesh_principal' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/old_mesh_principal.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 Refined mesh (**0.1 in** elements)
-<img src="{{ '/assets/redesign_first_mesh/new_mesh_principal_contours' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/new_mesh_principal_contours.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
@@ -423,18 +423,18 @@ Refined mesh (**0.1 in** elements)
 #### Finite Element Analysis – Strain Results
 
 Original mesh (**0.25 in** elements)
-<img src="{{ '/assets/redesign_first_mesh/normal strain' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/normal strain.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 Refined mesh (**0.1 in** elements)
-<img src="{{ '/assets/redesign_first_mesh/new_mesh_strain_contours' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/new_mesh_strain_contours.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
 ###### Strain at gauge (1.0 in from drive center:)
 
-<img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.353e-4' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.353e-4.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 
