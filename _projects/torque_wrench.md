@@ -436,7 +436,7 @@ Original mesh (**0.25 in** elements)
 Deflection = **0.2803 in**
 
 Refined mesh (**0.1 in** elements)
-<img src="{{ '/assets/2nd_mesh/new_meshd_deformation.png' | relative_url }}"
+<img src="{{ '/assets/2nd_mesh/new_mesd_deformation.png' | relative_url }}"
      alt="Normal strain contour plot"
      class="project-image">
 ---
