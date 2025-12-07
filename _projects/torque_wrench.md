@@ -303,11 +303,11 @@ The torque wrench was modeled in **Fusion 360** with all key dimensions defined 
 These dimensions were used directly in both the analytical calculations and the finite element model.
 
 <img src="{{ '/assets/CAD.png' | relative_url }}"
-     alt="Fully dimensioned CAD model"
+     alt="CAD model"
      class="project-image">
 
 <img src="{{ '/assets/CAD dimension.png' | relative_url }}"
-     alt="Gauge mounting surface detail"
+     alt="Dimensions"
      class="project-image">
 
 ---
