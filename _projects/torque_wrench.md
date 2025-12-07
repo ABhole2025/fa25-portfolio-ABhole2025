@@ -452,8 +452,8 @@ Refined mesh (**0.1 in** elements)
      alt="Normal strain contour plot"
      class="project-image">
 
-Original mesh (**0.25 in** elements) -> strain = 635.32 microstrain
-Refined mesh (**0.1 in** elements) -> strain = 636.64 microstrain
+- Original mesh (**0.25 in** elements): strain = 635.32 microstrain  
+- Refined mesh (**0.1 in** elements): strain = 636.64 microstrai
 
 ---
 
