@@ -17,7 +17,7 @@ The scope of the project included:
 
 ---
 
-## Project Requirements
+## <span style="color:#A7BADB;">Project Requirements</span>
 
 The minimum project requirements were:
 
@@ -29,7 +29,9 @@ The minimum project requirements were:
 
 ---
 
-## Design process
+## <span style="color:#A7BADB;">Design process</span>
+
+---
 
 #### Hand Calculations Using MATLAB
 
@@ -366,7 +368,9 @@ These dimensions were used directly in both the analytical calculations and the 
 
 ---
 
-## FEM Analysis in ANSYS
+## <span style="color:#A7BADB;">FEM Analysis in ANSYS</span>
+
+---
 
 #### Loads and Boundary Conditions
 
@@ -455,7 +459,7 @@ All project performance requirements were satisfied.
 
 ---
 
-## Conclusions and Reflections
+## <span style="color:#A7BADB;">Conclusions and Reflections</span>
 
 This project demonstrated the integration of mechanics of materials theory with finite element modeling and strain-based instrumentation.  
 Strong agreement between analytical predictions and FEM results increased confidence in the final design.
