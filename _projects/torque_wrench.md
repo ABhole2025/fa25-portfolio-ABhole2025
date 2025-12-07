@@ -384,32 +384,74 @@ This loading configuration produces bending about a single neutral axis, consist
      alt="Loads and boundary conditions diagram"
      class="project-image">
 
-<img src="{{ '/assets/redesign_first_mesh/clamped-drive (1).png(1)' | relative_url }}"
+<img src="{{ '/assets/redesign_first_mesh/clamped-drive (1).png' | relative_url }}"
      alt="Loads and boundary conditions diagram"
+     class="project-image">
+
+---
+
+#### Mesh
+
+I started with a Multizone mech that had **0.25 in** elements. After getting a set of measurements from it, I refined the mesh to have **0.1** in elements
+
+First Mesh:
+<img src="{{ '/assets/redesign_first_mesh/mesh_1_0.25_in.png' | relative_url }}"
+     alt="Loads and boundary conditions diagram"
+     class="project-image">
+
+Refined Mesh:
+<img src="{{ '/assets/2nd_mesh/new_mesh_0.1_in.png' | relative_url }}"
+     alt="Loads and boundary conditions diagram"
+     class="project-image">
+
+---
+
+#### Finite Element Analysis – Principal Stress
+
+Original mesh (**0.25 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/old_mesh_principal' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
+
+Refined mesh (**0.1 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/new_mesh_principal_contours' | relative_url }}"
+     alt="Normal strain contour plot"
      class="project-image">
 
 ---
 
 #### Finite Element Analysis – Strain Results
 
-Finite element analysis was used to extract **normal strain aligned with the strain gauge grid direction** on the gauge mounting surface.
-
-The strain field in the gauge region was found to be sufficiently uniform, validating the use of bonded strain gauges and the assumption of average strain measurement over the gauge area.
-
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
-     alt="Normal strain contour aligned with gauge direction"
+Original mesh (**0.25 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/normal strain' | relative_url }}"
+     alt="Normal strain contour plot"
      class="project-image">
+
+Refined mesh (**0.1 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/new_mesh_strain_contours' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
+
+###### Strain at gauge (1.0 in from drive center:)
+
+<img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.353e-4' | relative_url }}"
+     alt="Normal strain contour plot"
+     class="project-image">
+
+Original mesh (**0.25 in** elements) -> strain = 635.32 microstrain
+Refined mesh (**0.1 in** elements) -> strain = 636.64 microstrain
 
 ---
 
-#### Finite Element Analysis – Stress Results
+#### Finite Element Analysis – Normal Stress 
 
-Maximum principal stress contours were examined to identify the peak stresses in the wrench under rated loading and to confirm compliance with design limits.
-
-<img src="{{ '/assets/images/radio-machine.jpg' | relative_url }}"
+Original mesh (**0.25 in** elements)
+<img src="{{ '/assets/redesign_first_mesh/radio-machine.jpg' | relative_url }}"
      alt="Maximum principal stress contour plot"
      class="project-image">
 
+Refined mesh (**0.1 in** elements)
+    
 ---
 
 #### Strain Gauge Selection and Layout
