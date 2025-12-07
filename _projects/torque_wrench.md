@@ -35,6 +35,8 @@ The minimum project requirements were:
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Hand Calculations Using MATLAB
 
 The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
@@ -299,6 +301,8 @@ This code let me input the parameters of the chosen design and tweak it, while a
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Material Selection and Strain Gauge for Sensitivity Requirement
 
 The selected material for the final design was **AISI A2 Tool Steel**. This material is more on the brittle side than the other aluminum or titanium options shown, and I picked it scepcifically for its high stiffness, as I wanted to reduce deformation as much as possible. Additionally, I felt that this would be a more reasonable material overall, due to a relative lower cost compared to the aluminum and titanium options.
@@ -354,6 +358,8 @@ ALL CRITERIA MET: YES
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### CAD Model and Dimensions
 
 The torque wrench was modeled in **Fusion 360**. Below is a picture of the model istelf, and its relevant dimensions. To better resemble a real torque wrench, I filleted the drive with fillets of **0.05 in**. 
@@ -390,6 +396,8 @@ This loading configuration produces bending about a single neutral axis, consist
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Mesh
 
 I started with a Multizone mech that had **0.25 in** elements. After getting a set of measurements from it, I refined the mesh to have **0.1** in elements
@@ -406,6 +414,8 @@ Refined Mesh:
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Finite Element Analysis – Principal Stress
 
 Original mesh (**0.25 in** elements)
@@ -420,6 +430,8 @@ Refined mesh (**0.1 in** elements)
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Finite Element Analysis – Strain Results
 
 Original mesh (**0.25 in** elements)
@@ -432,6 +444,8 @@ Refined mesh (**0.1 in** elements)
      alt="Normal strain contour plot"
      class="project-image">
 
+<div style="margin-top:3rem;"></div>
+
 ###### Strain at gauge (1.0 in from drive center:)
 
 <img src="{{ '/assets/redesign_first_mesh/strain_at_gauge_6.3532e-4.png' | relative_url }}"
@@ -443,6 +457,8 @@ Refined mesh (**0.1 in** elements) -> strain = 636.64 microstrain
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Finite Element Analysis – Normal Stress 
 
 Original mesh (**0.25 in** elements)
@@ -453,6 +469,8 @@ Original mesh (**0.25 in** elements)
 Refined mesh (**0.1 in** elements)
     
 ---
+
+<div style="margin-top:3rem;"></div>
 
 #### Strain Gauge Selection and Layout
 
@@ -466,6 +484,8 @@ The **0.700-inch-wide gauge mounting face** provides sufficient space to bond al
      class="project-image">
 
 ---
+
+<div style="margin-top:3rem;"></div>
 
 #### Torque Wrench Sensitivity (From FEM Strain Results)
 
@@ -489,10 +509,12 @@ This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 
 ---
 
+<div style="margin-top:3rem;"></div>
+
 #### Stress Concentration Considerations
 
 
-
+<div style="margin-top:3rem;"></div>
 
 #### Results Summary (FEM Values)
 
