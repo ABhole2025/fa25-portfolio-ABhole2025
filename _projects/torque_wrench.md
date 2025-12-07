@@ -472,12 +472,12 @@ This output exceeds the minimum required sensitivity of **1.0 mV/V**.
 #### Finite Element Analysis – Normal Stress 
 
 Original mesh (**0.25 in** elements)
-<img src="{{ '/assets/normal_stress.png' | relative_url }}"
+<img src="{{ '/assets/images/normal_stress.png' | relative_url }}"
      alt="Maximum principal stress contour plot"
      class="project-image">
 
 Refined mesh (**0.1 in** elements)
-<img src="{{ '/assets/2nd_mesh/new_mesh_stress_max.png' | relative_url }}"
+<img src="{{ '/assets/images/new_mesh_stress_max.png' | relative_url }}"
      alt="Maximum principal stress contour plot"
      class="project-image">
 
