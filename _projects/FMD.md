@@ -7,7 +7,12 @@ image: /assets/CAD.png
 ---
 This image is a placeholder
 
-<video controls width="800">
-  <source src="/assets/new_fmd_uncropped.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe
+  width="800"
+  height="450"
+  src="https://www.youtube.com/embed/4YU2uvIFEm8"
+  title="Fluid Mechanical Dissection"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
