@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Fluid Mechanical Dissection – MAE 3230 (Fall 2025)"
-description: "Description"
+description: "Group mechanical dissection and analysis of a lawn mower carburetor"
 technologies: [""]
 image: /assets/carburetor.jpeg
 ---
