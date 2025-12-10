@@ -1,7 +1,11 @@
 ---
 layout: project
-title: "System Dynamics Project - Massage "
+title: "System Dynamics Project - Massage Gun"
 description: "Group mechanical dissection and analysis of a massage gun"
 technologies: [""]
-image: /assets/Screenshot 2025-12-06 at 18.38.17.png
+image: /assets/massage_gun.jpg
 ---
+
+Here is the report detailing the dissection:
+
+[📄 View the full dissection report (PDF)](/assets/3260_Dissection_Report.pdf)
