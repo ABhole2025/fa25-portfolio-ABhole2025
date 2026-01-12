@@ -37,7 +37,7 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 #### Skills
 - **Software:** Autodesk Fusion 360, ANSYS  
 - **Programming:** Python, MATLAB  
-- **Tools:** 
+<!--- **Tools:** -->
 
 ---
 
@@ -68,25 +68,25 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
   - Compiled a 128-page comprehensive report on all aspects of the project up to date with team members.
 
 ---
-
+<!-->
 #### Work Experience
 - **[Company Name] - Intern**  
   [Month, Year] - [Month, Year]  
   - Responsibility 1  
   - Responsibility 2  
-
+-->
 ---
-
+<!-->
 #### Achievements & Certifications
 - [Certification Name], [Issuing Organization], [Year]  
 - [Achievement Name], [Competition/Event], [Year]  
-
+-->
 ---
-
+<!-->
 #### Extracurricular Activities
 - Member of [Club/Organization Name]  
 - Volunteer for [Event/Organization Name]  
-
+-->
 ---
 
 #### References
