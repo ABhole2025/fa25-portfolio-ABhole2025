@@ -13,7 +13,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Mechanical Engineering student with an interest in Fluid Mechanics and Sustainablility in Urban Areas.
 
 ---
 
@@ -48,16 +48,19 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
   - Key Achievement 1  
   - Key Achievement 2  
 
+
 - **System Dynamics Teardown – Massage Gun (Fall 2025)**:  
   *-In a team of 4 students, disassembled a massage gun in a lab setting to identify all parts of its operating system and characterized it using system dynamics tools, creating a model of it.*  
   *-Wrote a technical report detailing analysis of this system.*
   - Key Achievement 1  
   - Key Achievement 2  
 
+
 - **Mechanics of Materials Design Project – Torque Wrench Redesign (Fall 2025)**:  
   *-Used ANSYS to analyze stresses in an existing design of a torque wrench, and used CAD to redesign the torque wrench to better fulfil the required factor of safety and other requirements.*  
   - Key Achievement 1  
   - Key Achievement 2  
+
 
 - **Cornell University Sustainable Design, Cornell University, Sustainable Mobility Project Team (Sept 2023-Present)**:  
   *-Work in a team with a professor and other graduate and undergraduate students to design a sustainable bus shelter for Ithaca’s bus network.*  
@@ -67,7 +70,7 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
   - Preliminary Stress Analysis on system using simulation software such as ANSYS
   - Compiled a 128-page comprehensive report on all aspects of the project up to date with team members.
 
----
+
 <!--
 #### Work Experience
 - **[Company Name] - Intern**  
@@ -75,19 +78,19 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
   - Responsibility 1  
   - Responsibility 2  
 -->
----
+
 <!--
 #### Achievements & Certifications
 - [Certification Name], [Issuing Organization], [Year]  
 - [Achievement Name], [Competition/Event], [Year]  
 -->
----
+
 <!--
 #### Extracurricular Activities
 - Member of [Club/Organization Name]  
 - Volunteer for [Event/Organization Name]  
 -->
----
+
 
 #### References
 Available upon request.
