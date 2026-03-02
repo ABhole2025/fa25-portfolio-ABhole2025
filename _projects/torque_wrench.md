@@ -24,11 +24,10 @@ The scope of the project included:
 The minimum project requirements were:
 
 - Minimum electrical output of **1.0 mV/V** from strain gauge at the rated torque of **600 in-lbf**
-- Safety factor **X₀ ≥ 4** for failiure due to stress (yielding or brittle, depending on material)
-- Fracture safety factor **Xᴷ ≥ 2** assuming an initial surface crack of depth **0.04 in (1 mm)**
-- Fatigue safety factor **Xˢ ≥ 1.5**
+- Safety factor $X_0 \ge 4$ for failure due to stress (yielding or brittle, depending on material)
+- Fracture safety factor $X_K \ge 2$ assuming an initial surface crack of depth **0.04 in (1 mm)**
+- Fatigue safety factor $X_S \ge 1.5$
 - Use of a **steel, aluminum, or titanium alloy**
-
 ---
 
 ## <span style="color:#A7BADB;">Design process</span>
@@ -39,7 +38,7 @@ The minimum project requirements were:
 
 The torque wrench was designed as a straight-handle, non-ratcheting beam subjected primarily to bending under applied torque, with a 3/8 inch drive. 
 
-First, hand calculations were done to create a design that met the requiremets. Using material data from Granta, a handful of materials were selected from the steel, aluminum, and titanium alloys. The preliminary selection was doen by looking at the ration of their fatugue stress to their yield strength and ultimate strength. The, taking the relevant material properties, they were run through the following MATLAB script:
+First, hand calculations were performed to create a design that met the requirements. Using material data from Granta, a handful of materials were selected from steel, aluminum, and titanium alloys. The preliminary selection was done by evaluating the ratio of their fatigue stress to their yield strength and ultimate strength. Then, taking the relevant material properties, they were run through the following MATLAB script:
 
 ```matlab
 %% WRENCH DESIGN ITERATOR
@@ -188,9 +187,9 @@ disp(locked);
 end
 ```
 
-This code displayed a large list of potential designs, giving the safety factors, strain gauge output, and the dimensions for h and b. there were a huge number of potential designs.
+This code displayed a large list of potential designs, providing safety factors, strain gauge output, and dimensions for height ($h$) and width ($b$).
 
-After picking one design, I ran it through this 'single design tester'
+After picking a candidate design, I refined it using a "single design tester" script to verify specific conditions.
 
 ```matlab
 %% ===================== MATERIAL PROPERTIES ==========================
@@ -318,11 +317,11 @@ The gauge location is **1.0 in** from the center of the drive.
 
 The full-bridge output was calculated using:
 
-> <span style="color:#93B596;">V_out = *GF* · *ε* · *10³*  *(mV/V)*</span>
->
-> <span style="color:#93B596;">Where:</span>
-> <span style="color:#93B596;">- Gauge factor **GF = 2**</span><br>
-> <span style="color:#93B596;">- ε is the strain at the gauge location</span>
+$$\color{#93B596}{V_{\text{out}} = GF \cdot \epsilon \cdot 10^3 \quad \text{(mV/V)}}$$
+
+**Where:**
+* $\color{#93B596}{GF}$ is the **Gauge Factor (2.0)**
+* $\color{#93B596}{\epsilon}$ is the **strain** at the gauge location
 
 The combination of this material's stiffness, and the full bridge strain gauge allow allow deformation to be kept on the lower side while still having the required output of **1.0 mV/V**
 
