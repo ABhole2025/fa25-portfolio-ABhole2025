@@ -8,4 +8,4 @@ image: /assets/massage_gun.jpg
 
 Here is the report detailing the dissection:
 
-[View the full dissection report]({{ "/assets/assets/3260_Dissection_Report.pdf" | relative_url }}) 
+[View the full dissection report]({{ "/assets/3260_Dissection_Report.pdf" | relative_url }}) 
